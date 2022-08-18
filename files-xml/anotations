@@ -1,2 +1,0 @@
-GetCustomerDetailRequest   -> GetCustomerDetailResponse
-input -> 123                  output -> id = 123, nome=Joao, phone= 999, email= joao@gmail.com

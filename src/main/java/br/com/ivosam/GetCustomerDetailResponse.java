@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2022.08.16 às 06:12:39 PM BRT 
+// Gerado em: 2022.08.18 às 09:43:25 AM BRT 
 //
 
 
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="CustomerDetail" type="{http://www.ivosam.com.br}CustomerDetail"/>
+ *         &lt;element name="CustomerDetail" type="{http://ivosam.com.br}CustomerDetail"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
