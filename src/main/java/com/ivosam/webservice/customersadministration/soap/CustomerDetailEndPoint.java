@@ -68,12 +68,26 @@ public class CustomerDetailEndPoint {
 
     }
 
-
     private br.com.ivosam.Status convertStatusSoap(
             com.ivosam.webservice.customersadministration.enums.Status statusService){
         if(statusService == com.ivosam.webservice.customersadministration.enums.Status.FAILURE){
             return br.com.ivosam.Status.FAILURE;
         }
         return br.com.ivosam.Status.SUCCESS;
+    }
+
+    @PayloadRoot(namespace = "http://ivosam.com.br", localPart = "InsertCustomerRequest")
+    @ResponsePayload
+    public InsertCustomerResponse insertCustomerRequest(@RequestPayload InsertCustomerRequest req){
+        InsertCustomerResponse response = new InsertCustomerResponse();
+        response.setStatus(convertStatusSoap
+                (service.insert(convertCustomer(req.getCustomerDetail()))));
+        return response;
+
+    }
+
+    private Customer convertCustomer(CustomerDetail customerDetail){
+        return new Customer(customerDetail.getId(), customerDetail.getName(),
+                customerDetail.getPhone(), customerDetail.getEmail());
     }
 }

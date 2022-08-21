@@ -33,6 +33,22 @@
      	</xs:complexType>
      </xs:element>
 
+	<xs:element name="InsertCustomerRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CustomerDetail" type="tns:CustomerDetail"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="InsertCustomerResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="tns:Status"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
 	<xs:element name="DeleteCustomerRequest">
 		<xs:complexType>
 			<xs:sequence>
